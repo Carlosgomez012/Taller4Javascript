@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="./Form.js" defer></script>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <div class="father-box">
+    <div class="form-box"> 
+        <form>
+            <h2>Formulario de Inscripción</h2>
+            <div>
+                <input type="number" name="id_usr" id="id_usr" placeholder="ID usuario">
+            </div>
+
+            <div>
+                <input type="number" name="id_pais" id="id_country" placeholder="ID pais">
+            </div>
+
+            <div>
+                <input type="text" id="name" placeholder="Nombre" >
+                <span id="nombreError" style="color: red;"></span>
+                
+            </div>
+
+            <div>
+                <input type="text" name="apellido" id="lastname" placeholder="Apellido" >
+                <span id="apellidoError" style="color: red;"></span>
+            </div>
+
+            <div>
+                <input type="text" name="dir" id="adress" placeholder="Dirección">
+                <span id="direccionError" style="color: red;"></span>
+            </div>
+
+            <div>
+                <input type="text" name="cc_usuario" id="cc_user" placeholder="CC usuario">
+                <span id="ccUsuarioError" style="color: red;""></span>
+            </div>
+            <div>
+                <input type="password" name="password" id="password" placeholder="Contraseña"
+               oninput="verificarContrasena()">
+                <span id="mensaje" style="color:red;"></span>
+            </div>
+
+            <div>
+                <input type="email"  id="email" placeholder="Email">
+                <span id="emailError" style="color: red;"></span>
+            </div>
+            <div>
+                <input type="number" name="number" id="number" placeholder="Telefono">
+            </div>
+
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+
+    <div class="gustos-box">
+        <div class="Selecciona">
+        <label for="gustos_radio">Selecciona para registrar tus gustos:</label>
+        <input type="radio" id="gustos_radio" name="gustos_radio">
+        <div class="registro-gustos" style="display: none;">
+            <h2>Registro de Gustos</h2>
+        
+            <div>
+                <label for="color_favorito">Color Favorito:</label>
+                <input type="text" id="color_favorito" name="color_favorito">
+            </div>
+        
+            <div>
+                <label for="marca_carro">Marca de Carro Favorita:</label>
+                <input type="text" id="marca_carro" name="marca_carro">
+            </div>
+        
+            <div>
+                <label for="estilo_carro">Estilo de Carro Favorito:</label>
+                <input type="text" id="estilo_carro" name="estilo_carro">
+            </div>
+        
+            <div>
+                <label for="modelo_carro">Modelo de Carro Favorito:</label>
+                <input type="text" id="modelo_carro" name="modelo_carro">
+            </div>
+        
+            <div>
+                <label for="rango_valor_carro">Rango de Valor para un Vehículo:</label>
+                <input type="range" id="rango_valor_carro" name="rango_valor_carro" min="0" max="100000" step="1000">
+            </div>
+        </div>   
+    </div>  
+
+    </div>
+</div>
+</body>
+</html>

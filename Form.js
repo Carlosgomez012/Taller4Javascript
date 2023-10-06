@@ -23,11 +23,11 @@ function validarNombre() {
     }
 }
 
-const apellidoInput=document.getElementById("lastname");
-const apellidoError=document.getElementById("apellidoError");
+const apellidoInput = document.getElementById("lastname");
+const apellidoError = document.getElementById("apellidoError");
 
-apellidoInput.addEventListener("input",validarApellido);
-apellidoInput.addEventListener("click",validarApellido);
+apellidoInput.addEventListener("input", validarApellido);
+apellidoInput.addEventListener("click", validarApellido);
 
 function validarApellido() {
     const apellidoValue = apellidoInput.value.trim();
@@ -47,27 +47,27 @@ function validarApellido() {
 // Para dirección
 
 const direccionInput = document.getElementById("adress");
-    const direccionError = document.getElementById("direccionError");
+const direccionError = document.getElementById("direccionError");
 
-    direccionInput.addEventListener("input", function () {// forma mas corta sin poner nombre para la función.
-        const direccionValue = direccionInput.value.trim();
-        if (direccionValue === "") {
-            direccionError.textContent = "El campo dirección debe estar lleno.";
+direccionInput.addEventListener("input", function () {// forma mas corta sin poner nombre para la función.
+    const direccionValue = direccionInput.value.trim();
+    if (direccionValue === "") {
+        direccionError.textContent = "El campo dirección debe estar lleno.";
+    } else {
+        const palabrasClave = ["cll", "cra", "av", "anv", "trans"];
+        const empiezaConPalabraClave = palabrasClave.some(palabra => direccionValue.toLowerCase().startsWith(palabra));
+        if (!empiezaConPalabraClave) {
+            direccionError.textContent = "La dirección debe empezar con cll, cra, av, anv o trans.";
         } else {
-            const palabrasClave = ["cll", "cra", "av", "anv", "trans"];
-            const empiezaConPalabraClave = palabrasClave.some(palabra => direccionValue.toLowerCase().startsWith(palabra));
-            if (!empiezaConPalabraClave) {
-                direccionError.textContent = "La dirección debe empezar con cll, cra, av, anv o trans.";
-            } else {
-                direccionError.textContent = ""; // Clear error message
-            }
+            direccionError.textContent = ""; // Clear error message
         }
-    });
+    }
+});
 
-    //CC usuario 
+//CC usuario 
 
 
-    // Obtener elementos del DOM
+// Obtener elementos del DOM
 const ccUsuarioInput = document.getElementById("cc_user");
 const ccUsuarioError = document.getElementById("ccUsuarioError");
 
@@ -85,10 +85,10 @@ function validarCCUsuario() {
     // Verificar si el campo está vacío
     if (ccUsuarioValue === "") {
         ccUsuarioError.textContent = "El campo CC usuario debe estar lleno.";
-    } else if(ccUsuarioValue.length<10){
+    } else if (ccUsuarioValue.length < 10) {
         ccUsuarioError.textContent = " El campo CC usuario debe tener almenos 10 caracteres";
     }
-    else if(ccUsuarioValue.length>25){
+    else if (ccUsuarioValue.length > 25) {
         ccUsuarioError.textContent = "El campo CC usuario no debe contener más de 25 caracteres";
     }
     else {
@@ -117,38 +117,38 @@ function validarCCUsuario() {
 //contraseña verificarla
 
 
-    function verificarContrasena() {
-        const regexMayuscula = /[A-Z]/;
-        const regexNumero = /[0-9]/;
-        const regexLetra = /[a-zA-Z]/;
-        const regexCaracterEspecial = /[#%\/&]/;
-        const password = document.getElementById("password").value;
-      
-        if (password.length < 15) {
-          document.getElementById("mensaje").textContent =
+function verificarContrasena() {
+    const regexMayuscula = /[A-Z]/;
+    const regexNumero = /[0-9]/;
+    const regexLetra = /[a-zA-Z]/;
+    const regexCaracterEspecial = /[#%\/&]/;
+    const password = document.getElementById("password").value;
+
+    if (password.length < 15) {
+        document.getElementById("mensaje").textContent =
             "La contraseña debe tener al menos 15 caracteres";
-        } else if (password.length > 25) {
-          document.getElementById("mensaje").textContent =
+    } else if (password.length > 25) {
+        document.getElementById("mensaje").textContent =
             "La contraseña debe tener un máximo de 25 caracteres";
-        } else if (
-          regexMayuscula.test(password) &&
-          regexNumero.test(password) &&
-          regexLetra.test(password) &&
-          regexCaracterEspecial.test(password)
-        ) {
-          document.getElementById("mensaje").textContent =
+    } else if (
+        regexMayuscula.test(password) &&
+        regexNumero.test(password) &&
+        regexLetra.test(password) &&
+        regexCaracterEspecial.test(password)
+    ) {
+        document.getElementById("mensaje").textContent =
             "La contraseña cumple con los requisitos";
-        } else {
-          document.getElementById("mensaje").textContent =
+    } else {
+        document.getElementById("mensaje").textContent =
             "La contraseña no cumple con los requisitos. Debe contener al menos una mayúscula, un número, una letra y uno de los siguientes caracteres: #, %, /, &.";
-        }
     }
+}
 
 
 
-        //email 
+//email 
 
- const emailInput = document.getElementById("email");
+const emailInput = document.getElementById("email");
 const emailError = document.getElementById("emailError");
 
 // Agregar el evento "input" y pasar la función de validación como parámetro
@@ -159,7 +159,7 @@ emailInput.addEventListener("input", validarEmail);
 // Definir la función de validación
 function validarEmail() {
     const emailValue = emailInput.value;
-    
+
     if (emailValue === "") {
         emailError.textContent = "El campo email debe estar lleno.";
 
@@ -173,24 +173,24 @@ function validarEmail() {
 
 // gustos 
 const gustosRadio = document.getElementById("gustos_radio");
-    const registroGustos = document.querySelector(".registro-gustos");
+const registroGustos = document.querySelector(".registro-gustos");
 
-    gustosRadio.addEventListener("change", function () {
-        if (this.checked) {
-            registroGustos.style.display = "block";
-        } else {
-            registroGustos.style.display = "none";
-        }
-    });
+gustosRadio.addEventListener("change", function () {
+    if (this.checked) {
+        registroGustos.style.display = "block";
+    } else {
+        registroGustos.style.display = "none";
+    }
+});
 
 
 
-        
-      
-      
 
-   
-  
+
+
+
+
+
 
 
 

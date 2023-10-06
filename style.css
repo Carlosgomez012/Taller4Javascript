@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c2c2c;
+    min-height: 100vh;
+}
+
+input {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #6f7484;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+
+    background-color: #f0f2f4eb;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+.form-box {
+    position: relative;
+    background-color: #71f4ef2f;
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #dcdcdc;
+}
+
+.father-box {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #195961, #1a2425, #1b1a1a, #30767f88);
+}
+
+.gustos-box {
+    background-color: #71f4ef2f;
+    height: 610.5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    color: #fff;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+    padding: 0;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para los mensajes de error */
+span {
+    font-size: 14px;
+    color: red;
+}
+
+/* Estilos para el radio button y la sección de gustos */
+#gustos_radio {
+    margin-right: 5px;
+}
+
+.registro-gustos {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Estilos adicionales para los campos de gustos */
+#color_favorito,
+#marca_carro,
+#estilo_carro,
+#modelo_carro {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
